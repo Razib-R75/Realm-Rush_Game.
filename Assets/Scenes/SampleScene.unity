@@ -400,7 +400,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5644001368203070151, guid: b940df629b09f434dbb9fd487257db6c, type: 3}
       propertyPath: speed
-      value: 0.26
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -5644001368203070151, guid: b940df629b09f434dbb9fd487257db6c, type: 3}
       propertyPath: path.Array.size

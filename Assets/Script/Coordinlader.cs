@@ -8,7 +8,7 @@ public class Coordinlader : MonoBehaviour
 {
     TextMeshPro label;
     Vector2Int coordinates = new Vector2Int();
-
+    Waypoint waypoint;
     void Awake()
     {
         label = GetComponent<TextMeshPro>();
