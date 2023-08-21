@@ -12,7 +12,7 @@ public class tergetLoceted : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        terget = FindObjectOfType<EnimyMover>().transform;
+        terget = FindObjectOfType<EnemyMover1>().transform;
     }
 
     // Update is called once per frame

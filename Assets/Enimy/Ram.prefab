@@ -127,11 +127,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5040643765344069697}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6c8178aaf7e8ee45b7ccf6aabc12b89, type: 3}
+  m_Script: {fileID: 11500000, guid: b31c00d8c31eb1745b5208cc517dd102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   path: []
-  speed: 1
+  speed: 0.49
 --- !u!65 &-1471583668490069449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -165,3 +165,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c30f3b0ed9629408ca0ab29a54a4e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHitPoint: 5
+  currentHitpoint: 0
