@@ -7,7 +7,7 @@ public class EnemyMover1 : MonoBehaviour
     [SerializeField] List<Waypoint> path = new List<Waypoint>();
     [SerializeField][Range(0f, 5f)] float speed = 1f;
 
-    void Start()
+    void OnEnable()
     {
         FindPath();
         ReorderPath(); // Reorder the path before starting to follow it
@@ -56,6 +56,6 @@ public class EnemyMover1 : MonoBehaviour
             }
         }
 
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

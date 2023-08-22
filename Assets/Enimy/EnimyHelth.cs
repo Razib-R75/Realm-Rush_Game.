@@ -8,7 +8,7 @@ public class EnimyHelth : MonoBehaviour
 
     [SerializeField]int currentHitpoint;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         currentHitpoint = maxHitPoint;
     }
@@ -28,7 +28,7 @@ public class EnimyHelth : MonoBehaviour
         currentHitpoint--;
         if(currentHitpoint<= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
