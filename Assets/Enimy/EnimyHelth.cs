@@ -7,7 +7,8 @@ public class EnimyHelth : MonoBehaviour
     [SerializeField] int maxHitPoint = 5;
 
     [SerializeField]int currentHitpoint;
-    // Start is called before the first frame update
+    Enimy enimy;
+  
     void OnEnable()
     {
         currentHitpoint = maxHitPoint;
@@ -16,7 +17,7 @@ public class EnimyHelth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        enimy = GetComponent<Enimy>();
     }
     void OnParticleCollision(GameObject other)
     {
@@ -29,6 +30,7 @@ public class EnimyHelth : MonoBehaviour
         if(currentHitpoint<= 0)
         {
             gameObject.SetActive(false);
+            enimy.RewardGold();
         }
     }
 }
