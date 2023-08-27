@@ -26,6 +26,7 @@ public class Coordinlader : MonoBehaviour
         {
             DisplayCoordinates();
             UpdateObjectName();
+            label.enabled = true;
         }
         ColorCoordinates();
         ToggleLabels();
