@@ -9,8 +9,17 @@ public class Bank : MonoBehaviour
 
     [SerializeField] int currentBalance;
     [SerializeField] TextMeshProUGUI displayBalance;
+    public GameObject GameOveer;
+    public GameObject pusemanu;
+    
     public int CurrentBalance { get { return currentBalance; } }
 
+    void Start()
+    {
+        GameOveer.SetActive(false);
+        pusemanu.SetActive(false);
+        
+    }
     void Awake()
     {
         currentBalance = startingBalance;
@@ -32,18 +41,43 @@ public class Bank : MonoBehaviour
         if (currentBalance < 0)
         {
             //Lose the game;
-            ReloadScene();
+            
+            GameOver();
+            
         }
     }
     void UpdateDisplay()
     {
         displayBalance.text = "Gold: " + currentBalance;
     }
-
-    void ReloadScene()
+    public void ReloadScene()
     {
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.buildIndex);
 
+    }
+    public void MainScene()
+    {
+       
+        SceneManager.LoadScene(0);
+        resume();
+
+    }
+
+    public void GameOver()
+    {
+        GameOveer.SetActive(true);
+        
+
+    }
+    public void puseGame()
+    {
+        pusemanu.SetActive(true);
+        Time.timeScale = 0;
+    }
+    public void resume()
+    {
+        pusemanu.SetActive(false);
+        Time.timeScale = 1;
     }
 }
